@@ -1,4 +1,6 @@
-const ReactionSchema = new Schema(
+const { Schema, model } = require('mongoose');
+
+const reactionSchema = new Schema(
   {
     // set custom id to avoid confusion with parent comment _id
     reactionId: {
@@ -20,10 +22,11 @@ const ReactionSchema = new Schema(
       get: createdAtVal => dateFormat(createdAtVal)
     }
   },
-  // might need a toJSON idk yet
-  // {
-  //   toJSON: {
-  //     getters: true
-  //   }
-  // }
+  {
+    toJSON: {
+      getters: true
+    }
+  }
 );
+
+module.exports =  reactionSchema;
