@@ -13,9 +13,28 @@ const ThoughtSchema = new Schema(
       type: Date,
       default: Date.now,
       get: createdAtVal => DateFormat(createdAtVal)
-    }
+    },
+    username: {
+      type: String,
+      required: true
+    },
+    reactions:[
+      {
+        type: Schema.Types.reactionSchema,
+
+      }
+    ],
+  },
+  {
+    toJSON: {
+      virtuals: true
+    },
+    // prevents virtuals from creating duplicate of _id as `id`
+    id: false
   }
+  
 )
+
 
 const Thought = model('Thought', ThoughtSchema);
 module.exports = Thought

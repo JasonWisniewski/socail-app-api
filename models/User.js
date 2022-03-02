@@ -23,7 +23,8 @@ const UserSchema = new Schema(
       // array of _id values referencing thought model
     friends: [
       {
-        type:
+        type: Schema.Types.ObjectId,
+        ref: 'User'
 
       }
     ],
