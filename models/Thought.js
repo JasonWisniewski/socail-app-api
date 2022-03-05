@@ -23,14 +23,14 @@ const ThoughtSchema = new Schema(
   },
   {
     toJSON: {
-      virtuals: true
+      virtuals: true,
+      getters: true
     },
     // prevents virtuals from creating duplicate of _id as `id`
     id: false
   }
   
 )
-
 
 const Thought = model('Thought', ThoughtSchema);
 module.exports = Thought
