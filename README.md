@@ -20,7 +20,7 @@ clone the repo.
 ## Usage
 a walk through of the application can be found at.
 
-https://drive.google.com/file/d/16RHfnBD3UKGIqiyYx-16aTNsXSrwSuQe/view
+https://drive.google.com/file/d/19UEtHwqUOMODvKFGNfnNtV9A1Ln-pydy/view
 
 This can be used by anyone looking for an api for their social media application. 
 
