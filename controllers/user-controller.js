@@ -57,7 +57,6 @@ const userController = {
       .catch(err => res.json(err));
   },
 
-  // left off here need to verify that this works
   addFriend({ params }, res){
     User.findOneAndUpdate(
       { _id: params.userId },
@@ -74,6 +73,7 @@ const userController = {
       .catch(err => res.json(err));
   },
 
+  // left off here need to verify that this works
   deleteFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.userId },
